@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // 直接更新 mainContent 为最终界面
         mainContent.innerHTML = `
             <div class="final-message">
-                <h1>嘻嘻😁</h1> <!-- 移除了名字输入，改为通用称呼 -->
+                <h1>嘻嘻💞</h1> <!-- 移除了名字输入，改为通用称呼 -->
                 <p>谢谢你选择了我，未来有你，真好！</p>
                 
                 <img src="images/39.jpg" alt="我们最棒的照片" style="max-width: 80%; border-radius: 15px; margin-top: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
