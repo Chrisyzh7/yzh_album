@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 最终互动区的文字数组
     const questions = [
-        "亲爱的，你愿意永远陪在我身边吗？",
+        "亲爱的，你愿意一直陪在我身边吗？",
         "再想想，这可是个好机会哦！你忍心拒绝一个为你费尽心思的程序员吗？",
         "别犹豫啦，我的心意你还不懂吗？点击“愿意”，你将获得一个超甜的男朋友！",
         "点击“不愿意”会带来未知的后果哦...你确定要试试吗？",
@@ -202,10 +202,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // 直接更新 mainContent 为最终界面
         mainContent.innerHTML = `
             <div class="final-message">
-                <h1>我爱你！</h1> <!-- 移除了名字输入，改为通用称呼 -->
+                <h1>嘻嘻😁</h1> <!-- 移除了名字输入，改为通用称呼 -->
                 <p>谢谢你选择了我，未来有你，真好！</p>
+                
                 <img src="images/39.jpg" alt="我们最棒的照片" style="max-width: 80%; border-radius: 15px; margin-top: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                <p style="margin-top: 20px; font-size: 1.2em;">（这个页面现在可以关闭啦！）</p>
+                <p style="margin-top: 20px; font-size: 1.2em;"></p>
+                <p style="margin-top: 20px; font-size: 1.2em;">不止七夕 希望我们能在一起 朝朝夕夕~</p>
             </div>
         `;
         mainContent.style.display = 'block';
