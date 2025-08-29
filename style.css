@@ -1,0 +1,425 @@
+/* 全局样式和重置 */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 常用字体 */
+    background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); /* 温馨的渐变背景 */
+    color: #333;
+    display: flex; /* 确保body内容居中 */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* 最小高度充满视口 */
+    overflow-x: hidden; /* 防止横向滚动条 */
+    font-size: 16px;
+    padding-top: 20px; /* 顶部留白 */
+    padding-bottom: 20px; /* 底部留白 */
+}
+
+.hidden {
+    display: none !important; /* 用于隐藏元素 */
+}
+
+/* 初始弹出框样式 */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明黑色背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* 确保在最上层 */
+    backdrop-filter: blur(5px); /* 背景模糊效果 */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 60px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(0.8); /* 初始小一点 */
+    opacity: 0; /* 初始透明 */
+    animation: fadeInScale 1s forwards ease-out; /* 弹出动画 */
+    position: relative;
+    overflow: hidden; /* 隐藏溢出的雪花 */
+}
+
+/* 生日快乐文字特效 */
+.happy-birthday-text {
+    font-size: 4em; /* 字体大小 */
+    color: #ff69b4; /* 粉色 */
+    text-shadow: 0 0 15px rgba(255, 105, 180, 0.7); /* 粉色发光 */
+    margin-bottom: 30px;
+    animation: pulse 1.5s infinite alternate; /* 呼吸灯效果 */
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+@keyframes fadeInScale {
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulse {
+    from { transform: scale(1); text-shadow: 0 0 5px #ff69b4; }
+    to { transform: scale(1.05); text-shadow: 0 0 20px #ff69b4; }
+}
+
+/* 模态框按钮 */
+.modal-button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px; /* 圆角按钮 */
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+}
+
+.modal-button:hover {
+    background-color: #e65a9e;
+    transform: translateY(-3px);
+}
+
+/* 网页主要内容样式 */
+#mainContent {
+    max-width: 900px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* 半透明白色背景 */
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    box-sizing: border-box;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideInUp 1s forwards ease-out; /* 内容进入动画 */
+    margin: 20px; /* 防止内容贴边 */
+}
+
+@keyframes slideInUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+header h1 {
+    color: #ff69b4;
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+header .subtitle {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* 相册容器样式 */
+.photo-section {
+    margin-top: 50px;
+}
+
+.album {
+    background-color: #fcfcfc; /* 相册背景色 */
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    margin-bottom: 60px; /* 每个相册之间的间距 */
+    border: 1px solid #f0f0f0;
+}
+
+.album-title {
+    font-size: 2.2em;
+    color: #8a2be2; /* 薰衣草色，作为标题色 */
+    margin-bottom: 30px;
+    border-bottom: 2px solid #fbd0d8; /* 底部强调线 */
+    padding-bottom: 15px;
+    display: inline-block; /* 让边框线只在文本下方 */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.album-grid {
+    display: grid; /* 使用CSS Grid布局 */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 响应式网格，至少250px宽 */
+    gap: 30px; /* 网格项之间的间距 */
+    justify-content: center; /* 在容器中居中网格 */
+    /* 移除 align-items: stretch; 等，让内容决定高度 */
+}
+
+/* 重点修改这里：photo-item 和 photo-item img/p */
+.photo-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* 开启Flexbox */
+    flex-direction: column; /* 垂直堆叠内容 */
+    /* 移除固定宽度，让grid自动分配 */
+}
+
+.photo-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.photo-item img {
+    max-width: 100%;
+    height: auto; /* 关键：让图片根据自身宽度自动调整高度，保持比例 */
+    /* object-fit: cover; 移除：不再裁剪图片 */
+    display: block; /* 避免图片下方出现默认间隙 */
+    border-radius: 8px;
+    margin-bottom: 15px; /* 图片和文字之间的间距 */
+    border: 3px solid #fbd0d8; /* 边框 */
+}
+
+.photo-item p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin-top: auto; /* 关键：将文字推到底部 */
+    /* flex-grow 和 align-items 就不再需要直接写在这里了，margin-top: auto 更直接 */
+}
+
+
+.message-section p {
+    font-size: 1.3em;
+    line-height: 1.8;
+    margin: 20px auto;
+    max-width: 700px;
+    color: #444;
+}
+
+/* 最终互动区样式 - 保持不变 */
+.interactive-section {
+    margin-top: 60px;
+    padding: 40px 20px;
+    background-color: #fff0f5; /* 浅粉色背景 */
+    border-radius: 15px;
+    box-shadow: inset 0 0 15px rgba(255, 105, 180, 0.1);
+}
+
+.question-box {
+    padding: 30px;
+    border: 2px dashed #ff69b4; /* 虚线边框 */
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.changing-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: #8a2be2; /* 薰衣草色 */
+    margin-bottom: 30px;
+    transition: color 0.5s ease; /* 文本颜色过渡 */
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* 按钮间距 */
+}
+
+.action-button {
+    padding: 18px 45px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.6em;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* 更平滑的过渡 */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    font-weight: bold;
+}
+
+.willing-button {
+    background-color: #ff69b4; /* 粉色 */
+    color: white;
+}
+
+.willing-button:hover {
+    background-color: #e65a9e;
+    transform: scale(1.05); /* 悬停放大 */
+}
+
+.unwilling-button {
+    background-color: #f0f0f0; /* 浅灰色 */
+    color: #666;
+}
+
+.unwilling-button:hover {
+    background-color: #e0e0e0;
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* 雪花效果 */
+.snowflake {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    pointer-events: none;
+    animation: fall linear infinite;
+    z-index: 0; /* 保持在背景之上，但低于其他内容 (如 modal 或 mainContent) */
+}
+
+@keyframes fall {
+    0% { transform: translateY(-10px); opacity: 0; }
+    10% { opacity: 0.8; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
+
+/* 爱心飘落效果 */
+.heart-fall {
+    position: absolute;
+    bottom: -20px;
+    font-size: 20px;
+    color: #ff69b4;
+    animation: heartFall 10s linear infinite;
+    z-index: 0; /* 保持在背景之上，但低于其他内容 */
+    pointer-events: none;
+    text-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+}
+
+@keyframes heartFall {
+    0% { transform: translateY(0) scale(0); opacity: 0; }
+    20% { opacity: 1; transform: translateY(-100px) scale(0.8); }
+    80% { opacity: 1; transform: translateY(-700px) scale(1.2); }
+    100% { transform: translateY(-1000px) scale(1.5); opacity: 0; }
+}
+
+/* 确保 modal 和 mainContent 在雪花/爱心之上 */
+.modal {
+    z-index: 1000; /* 保持模态框在最上层 */
+}
+#mainContent {
+    z-index: 1; /* 确保主要内容在雪花/爱心之上 */
+    position: relative; /* 确保 z-index 生效 */
+}
+
+/* 媒体查询 - 适应小屏幕 */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 30px;
+        width: 80%;
+    }
+    .happy-birthday-text {
+        font-size: 3em;
+    }
+    .modal-button {
+        padding: 12px 30px;
+        font-size: 1.2em;
+    }
+    #mainContent {
+        padding: 20px;
+    }
+    header h1 {
+        font-size: 2.5em;
+    }
+    .album-title {
+        font-size: 1.8em;
+    }
+    .album-grid {
+        grid-template-columns: 1fr; /* 小屏幕上每行一张照片 */
+    }
+    .photo-item {
+        width: 100%; /* 小屏幕上照片卡片全宽 */
+    }
+    .changing-text {
+        font-size: 1.5em;
+    }
+    .action-button {
+        padding: 15px 30px;
+        font-size: 1.4em;
+    }
+    .buttons-container {
+        flex-direction: column; /* 按钮垂直排列 */
+        gap: 15px;
+    }
+}
+/* 新增导航菜单样式 */
+.album-navigation {
+    margin-bottom: 50px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: inline-block; /* 让背景和阴影只包裹内容 */
+}
+
+.album-navigation ul {
+    list-style: none; /* 移除列表点 */
+    padding: 0;
+    margin: 0;
+    display: flex; /* 让导航项水平排列 */
+    justify-content: center;
+    flex-wrap: wrap; /* 允许换行 */
+}
+
+.album-navigation li {
+    margin: 0 15px; /* 导航项之间间距 */
+}
+
+.album-navigation a {
+    text-decoration: none; /* 移除下划线 */
+    color: #ff69b4; /* 粉色字体 */
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.album-navigation a:hover {
+    background-color: #ff69b4;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(255,105,180,0.3);
+}
+
+/* ... (后续CSS代码保持不变) ... */
+
+/* 媒体查询 - 适应小屏幕，调整导航菜单 */
+@media (max-width: 768px) {
+    /* ... (之前的媒体查询代码保持不变) ... */
+    .album-navigation {
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+    .album-navigation li {
+        margin: 0 8px; /* 减小导航项间距 */
+    }
+    .album-navigation a {
+        font-size: 1em;
+        padding: 6px 10px;
+    }
+}
+
+/* 爱心飘落效果 (可以替换或与雪花共存) */
+.heart-fall {
+    position: absolute;
+    bottom: -20px; /* 从屏幕下方开始 */
+    font-size: 20px; /* 爱心大小 */
+    color: #ff69b4; /* 粉色爱心 */
+    animation: heartFall 10s linear infinite;
+    z-index: 1; /* 确保在内容上方，如果希望更突出 */
+    pointer-events: none;
+    text-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+}
+
+@keyframes heartFall {
+    0% { transform: translateY(0) scale(0); opacity: 0; }
+    20% { opacity: 1; transform: translateY(-100px) scale(0.8); }
+    80% { opacity: 1; transform: translateY(-700px) scale(1.2); }
+    100% { transform: translateY(-1000px) scale(1.5); opacity: 0; }
+}

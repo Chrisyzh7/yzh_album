@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日惊喜！🎉</title>
+    <link rel="stylesheet" href="1.css"> <!-- 引入CSS文件 -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎂</text></svg>">
+</head>
+<body>
+
+    <!-- 初始弹出框 -->
+    <div id="initialModal" class="modal">
+        <div class="modal-content">
+            <p class="happy-birthday-text">生日快乐🎂</p>
+            <button id="enterButton" class="modal-button">点击进入</button>
+        </div>
+    </div>
+
+    <!-- 网页主要内容区 -->
+    <div id="mainContent" class="hidden">
+        <header>
+            <h1>致我最爱的小宝</h1>
+            <p class="subtitle">这些瞬间，拼凑出我们最美好的故事。</p>
+            <p>2025.8.28完成，作为小羞给小宝的七夕礼物~虽然简陋，但是是小羞的一片心意~当做我们的赛博相册记录我们</p>
+
+            <!-- 新增导航菜单 -->
+            <nav class="album-navigation">
+                <ul>
+                    <li><a href="#album1">相识</a></li>
+                    <li><a href="#album2">小宝自夸</a></li>
+                    <li><a href="#album3">我们的开始</a></li>
+                    <li><a href="#album4">佛山之旅</a></li>
+                    <li><a href="#album5">腻歪日常</a></li>
+                    <li><a href="#album6">珠海之旅</a></li>
+                    <li><a href="#album7">小宝美照</a></li>
+                    <li><a href="#album8">小羞可爱照</a></li>
+                    <li><a href="#album9">第一个生日</a></li>
+                    <!-- 如果有更多相册，在这里添加更多链接 -->
+                    <li><a href="#final-section">我们的承诺</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="photo-section">
+            <!-- 第一个相册：我们的相识 -->
+            <div class="album" id="album1"> <!-- 添加ID -->
+                <h2 class="album-title">第一章：我们的相识，缘分的开始</h2>
+                <div class="album-grid">
+                    <div class="photo-item">
+                        <img src="images/照片2.jpg" alt="我们的美好瞬间1">
+                        <p>2023年10月26号，踢球突然你来了说要采访我</p>
+                        <img src="images/照片1.jpg" alt="我们的美好瞬间2">
+                        <p>“你好！！我是23IET薛雅洁~~~”</p>
+                    </div>
+                    <div class="photo-item">
+                        
+                        <img src="images/照片3.png" alt="我们的美好瞬间2">
+                        <p>“好巧呀好巧呀好巧呀~”
+                            真的是巧合嘛~
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- 第二个相册：甜蜜的日常 -->
+            <div class="album" id="album2"> <!-- 添加ID -->
+                <h2 class="album-title">第二章：薛雅洁自夸日记</h2>
+                <div class="album-grid">
+                    <div class="photo-item">
+                        <img src="images/照片4.png" alt="我们的美好瞬间4">
+                        <p>“没喝醉过啊，喝酒为什么会醉~”</p>
+                        <p>喝晕了就开始胡言乱语</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第三个相册：我们的开始 -->
+            <div class="album" id="album3"> <!-- 添加ID -->
+                <h2 class="album-title">第三章：我们的开始</h2>
+                <div class="album-grid">
+                    <div class="photo-item">
+                        <img src="images/17.jpg" alt="我们的美好瞬间4">
+                        <p>3.1号，我去机场接你，羞涩的抱了抱，然后就来吃胖哥俩，好吃嘻嘻</p>
+                    </div>
+
+                    <div class="photo-item">
+                        <img src="images/20.jpg" alt="我们的美好瞬间9">
+                        <p>3.8号，我们第一次出去玩，化了个美美的妆，走在路上不敢看你，看一眼腿都软了，太漂亮噜!给你夸爽了吧那天哈哈哈哈哈</p>
+                    </div>
+
+                    <div class="photo-item">
+                        <img src="images/18.jpg" alt="我们的美好瞬间8">
+                        <p>你总说我们太快了 也感觉没有很正式，你想要一个正式的表白
+                            一个正式的恋爱 需要从一束花开始~你假期说过你喜欢卡布奇诺玫瑰，这是第二次买啦</p>
+                    </div>
+
+                    <div class="photo-item">
+                        <img src="images/21.jpg" alt="我们的美好瞬间9">
+                        <p>思来想去，想找个好时候，等不到放假，想着328 823，就定在了328，那天我们还做了戒指</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- 第四个相册：我们第一次去音乐节 佛山之旅 -->
+            <div class="album" id="album4"> <!-- 添加ID -->
+                <h2 class="album-title">第四章：我们第一次去音乐节 佛山之旅</h2>
+                <div class="album-grid">
+                    <div class="photo-item">
+                        <img src="images/22.jpg" alt="我们的美好瞬间9">
+                        <p>一大早就出发，磨蹭蛋化妆化了好久，早饭都来不及吃，我随手买个面包随手一拍就是美照，这样的男人去哪里找</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/23.jpg" alt="我们的美好瞬间9">
+                        <p>到达佛山吃了云南米线，俺第一次吃，好吃嘻嘻，你在臭美</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/281.jpg" alt="我们的美好瞬间9">
+                        <p>俺第一次听音乐节，前一天晚上难受了好久，怕天气不好怕体验不好，万幸天公作美，我们去的那天不冷也不下雨
+                            只是我们都想听的“和你”居然没唱，真可恶，还给小宝宝气哭了哈哈哈哈哈但是！现在~是不是就在和你听“和你”呢~
+                        </p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/24.jpg" alt="我们的美好瞬间9">
+                        <p>站累了，听得差不多了准备走了想起来没拍照片，摄影师上线</p>
+                        <img src="images/25.jpg" alt="我们的美好瞬间9">
+                        <p>真漂亮小宝宝~~~</p>
+                    </div>
+
+                    <div class="photo-item">
+                        <img src="images/26.jpg" alt="我们的美好瞬间9">
+                        <p>诶诶诶干啥呢，随地大小亲！</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/27.jpg" alt="我们的美好瞬间9">
+                        <p>虽然没听到“和你”但是颜人中的每首歌都好好听，你说对他路转粉啦哈哈哈哈</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 第wu个相册：未来的憧憬 -->
+            <div class="album" id="album5"> <!-- 添加ID -->
+                <h2 class="album-title">第五章：图书馆腻歪日常</h2>
+                <div class="album-grid">
+                    <div class="photo-item">
+                        <img src="images/5.jpg" alt="我们的美好瞬间7">
+                        <p>刚开学的时候，每天在图书馆学习完，晚上都要在外面约会羞羞</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/6.jpg" alt="我们的美好瞬间8">
+                        <p>这小嘴一喝水就bulingbuling的</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/7.jpg" alt="我们的美好瞬间9">
+                        <p>不知道干啥呢，坐那就哼上了，跟个小饺子似的</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/8.jpg" alt="我们的美好瞬间9">
+                        <p>美美哒~</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/9.jpg" alt="我们的美好瞬间9">
+                        <p>么么么~</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/10.jpg" alt="我们的美好瞬间9">
+                        <p>大头儿子~小头爸爸~</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/11.jpg" alt="我们的美好瞬间9">
+                        <p>像小狗一样贴贴~</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/12.jpg" alt="我们的美好瞬间9">
+                        <p>说什么坐我身边学不进去？跑到小桌子上学习哼
+                            这小衣服好漂亮
+                        </p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/13.jpg" alt="我们的美好瞬间9">
+                        <p>不学习就玩手机 拿起手机就拍</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/15.jpg" alt="我们的美好瞬间9">
+                        <p>偷拍小笨鸭被发现了，好呆</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/14.jpg" alt="我们的美好瞬间9">
+                        <p>学累了还是不想学，反正到中间又玩上了</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/55.jpg" alt="我们的美好瞬间9">
+                        <p>这是被谁偷拍的，真不戳</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 你可以继续添加更多 album 容器来创建更多相册，并给它们添加唯一的ID -->
+
+            <!-- 第6个相册：珠海之旅 -->
+            <div class="album" id="album6"> <!-- 添加ID -->
+                <h2 class="album-title">第六章：珠海之旅</h2>
+                <div class="album-grid">
+                    <div class="photo-item">
+                        <img src="images/34.jpg" alt="我们的美好瞬间4">
+                        <p>出发去珠海啦~小宝宝以为我睡着了偷拍实则被我发现了</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/32.jpg" alt="我们的美好瞬间4">
+                        <p>抵达长隆~美美拍照中</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/33.jpg" alt="我们的美好瞬间4">
+                        <p>两个要出片的人又不好意思拍照（我羞）</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/36.jpg" alt="我们的美好瞬间4">
+                        <p>好美好喜欢</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/31.jpg" alt="我们的美好瞬间4">
+                        <p>第二天在阴沉沉的海边也能拍出美美的照片</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/35.jpg" alt="我们的美好瞬间4">
+                        <p>等到晚上看了美丽的烟花，还在好多人面前亲嘴嘴（羞羞羞~）</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/37.jpg" alt="我们的美好瞬间4">
+                        <p>一些可爱的小动物~</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/39.jpg" alt="我们的美好瞬间4">
+                        <p>我宣布这是我最喜欢的照片！！！</p>
+                    </div>
+                    
+                </div>
+                <p>珠海之旅发生了很多事情，说实话第一次让我和你感受到恋爱的“苦”，没有两个人是天生一对的，再契合的情侣都需要一直彼此熟悉，交流，改变，最后接受。
+                    俺也不知道为什么那天晚上哭的稀里哗啦，可能是小宝欺负我了~
+                    我觉得这句话说的很对：最赤裸的不是脱光衣服，而是在你面前不加掩饰的哭泣</p>
+            </div>
+
+            <!-- 第七个相册：小宝的可爱抓拍 -->
+            <div class="album" id="album7"> <!-- 添加ID -->
+                <h2 class="album-title">第七章：小宝的可爱抓拍</h2>
+                <div class="album-grid">
+                    <div class="photo-item">
+                        <img src="images/41.jpg" alt="我们的美好瞬间9">
+                        <p>不知道在架空层干嘛，就可可爱爱的转了起来~</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/42.jpg" alt="我们的美好瞬间9">
+                        <p>给小宝宝买的小裙子，非常的适合且漂亮嘿嘿</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/40.jpg" alt="我们的美好瞬间9">
+                        <p>小宝宝从家回广州，出去吃了螺蛳粉，在星巴克坐着拍照</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/45.jpg" alt="我们的美好瞬间9">
+                        <p>复习周不复习跑出去不知道干嘛，看到了大鹅，我随手一拍又是美照</p>
+                    </div>
+
+                    <div class="photo-item">
+                        <img src="images/43.jpg" alt="我们的美好瞬间9">
+                        <p>一个周日，上完了选修课，咱俩去南门夜市吃东西，看到圆滚滚的肚子非常之白嫩，遂偷拍</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/46.jpg" alt="我们的美好瞬间9">
+                        <p>俺记得 这是在你公司楼下的喜茶</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/47.jpg" alt="我们的美好瞬间9">
+                        <p>不知道撒时候拿我手机臭美偷拍的</p>
+                    </div>
+                    <div class="photo-item">
+                        <img src="images/48.jpg" alt="我们的美好瞬间9">
+                        <p>想你~就哭着喊着要看照片，这张好美</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 第八个相册：陪你的第一个生日 -->
+            <div class="album" id="album8"> <!-- 添加ID -->
+                <h2 class="album-title">第八章：都让开都让开！小宝的可爱小羞来了！</h2>
+                <div class="album-grid">
+                    <div class="photo-item">
+                        <img src="images/56.jpg" alt="我们的美好瞬间4">
+                        <p>我们一起去涂娃娃，可可爱爱嘟</p>
+                    </div>
+
+                    <div class="photo-item">
+                        <img src="images/61.png" alt="我们的美好瞬间9">
+                        <p>成品在这.\</p>
+                    </div>
+
+                    <div class="photo-item">
+                        <img src="images/60.jpg" alt="我们的美好瞬间8">
+                        <p>诶呀真是小鸟依人呢</p>
+                    </div>
+
+                    <div class="photo-item">
+                        <img src="images/58.jpg" alt="我们的美好瞬间9">
+                        <p>呜呼呜呼</p>
+                    </div>
+
+                    <div class="photo-item">
+                        <img src="images/57.jpg" alt="我们的美好瞬间9">
+                        <p>大眼睛帅哥</p>
+                    </div>
+
+                    <div class="photo-item">
+                        <img src="images/59.jpg" alt="我们的美好瞬间9">
+                        <p>认真学习的小羞</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- 第九个相册：陪你的第一个生日 -->
+            <div class="album" id="album8"> <!-- 添加ID -->
+                <h2 class="album-title">第九章：陪你的第一个生日</h2>
+                <div class="album-grid">
+                    <div class="photo-item">
+                        <img src="images/49.jpg" alt="我们的美好瞬间4">
+                        <p>好看 后面的我显得很商务</p>
+                    </div>
+
+                    <div class="photo-item">
+                        <img src="images/52.jpg" alt="我们的美好瞬间9">
+                        <p>商务这一块.\</p>
+                    </div>
+
+                    <div class="photo-item">
+                        <img src="images/53.jpg" alt="我们的美好瞬间8">
+                        <p>小宝自拍</p>
+                    </div>
+
+                    <div class="photo-item">
+                        <img src="images/50.jpg" alt="我们的美好瞬间9">
+                        <p>小羞偷拍</p>
+                    </div>
+
+                    <div class="photo-item">
+                        <img src="images/51.jpg" alt="我们的美好瞬间9">
+                        <p>这张美美美，可恶的薛雅洁都不发哼哼哼</p>
+                    </div>
+
+                    <div class="photo-item">
+                        <img src="images/54.jpg" alt="我们的美好瞬间9">
+                        <p>宠你一下把你的美照也放上来</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </section>
+
+        <section class="message-section">
+            <p>好啦~亲亲小宝~本期的赛博相册到这里就展示完了，但是属于我们的故事还有很长很长</p>
+            <p>这一路走来，有欢声笑语，也有相互扶持。感谢你出现在我的生命里，让一切都变得如此不同。</p>
+            <p>今天是重要的日子，我想送给你一份特别的礼物，一份关于我们未来的承诺。</p>
+        </section>
+
+        <!-- 最终互动区 -->
+        <section class="interactive-section" id="final-section"> <!-- 给最终互动区也添加ID -->
+            <div class="question-box">
+                <p id="questionText" class="changing-text">亲爱的，你愿意永远陪在我身边吗？</p>
+                <div class="buttons-container">
+                    <button id="willingBtn" class="action-button willing-button">愿意</button>
+                    <button id="unwillingBtn" class="action-button unwilling-button">不愿意</button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 小宝 &amp; 小羞. 特别为你制作</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script> <!-- 引入JavaScript文件 -->
+</body>
+</html>
+
